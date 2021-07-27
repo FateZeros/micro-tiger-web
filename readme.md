@@ -1,6 +1,7 @@
 # 前端微服务框架搭建
 
-Vue 版本 @vue/cli 4.5.13
+![](https://img.shields.io/badge/qiankun-2.0%2B-green)
+![](https://img.shields.io/badge/vue-2.0%2B-brightgreen)
 
 实战 [qiankun 2.0](https://qiankun.umijs.org/zh/guide)
 
@@ -20,8 +21,8 @@ yarn add qiankun
 
 ### 项目启动
 
-|     项目      |      域名      |
-| :-----------: | :------------: |
-| 基座项目 main | localhost:6000 |
-|  微项目 vue   | localhost:6001 |
-| 微项目 react  | localhost:6002 |
+|     项目      |    版本    |      域名      |
+| :-----------: | :--------: | :------------: |
+| 基座项目 main |  vue 2.0   | localhost:6000 |
+|  微项目 vue   |   vue2.0   | localhost:6001 |
+| 微项目 react  | react 17.0 | localhost:6002 |
