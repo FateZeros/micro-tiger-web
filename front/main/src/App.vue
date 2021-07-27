@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-  </div>
+  <div id="subapp-viewport"></div>
 </template>
 
 <script>
@@ -12,10 +11,6 @@ export default {
 </script>
 
 <style>
-* {
-  height: 100%;
-}
-
 html,
 body {
   margin: 0;
@@ -23,5 +18,6 @@ body {
 }
 
 #app {
+  height: 100%;
 }
 </style>

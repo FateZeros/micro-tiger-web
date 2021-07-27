@@ -17,3 +17,11 @@ yarn add qiankun
   |—— sub-react1   // react 子应用
   └── sub-vue1     // vue 子应用
 ```
+
+### 项目启动
+
+|     项目      |      域名      |
+| :-----------: | :------------: |
+| 基座项目 main | localhost:6000 |
+|  微项目 vue   | localhost:6001 |
+| 微项目 react  | localhost:6002 |
