@@ -3,6 +3,7 @@ import App from './App.vue'
 import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
 import microApps from './micro-app'
 
+// 主引用使用神策
 import './utils/sensor'
 
 Vue.config.productionTip = false
