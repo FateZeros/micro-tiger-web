@@ -21,8 +21,12 @@ yarn add qiankun
 
 ### 项目启动
 
-|     项目      |    版本    |      域名      |
-| :-----------: | :--------: | :------------: |
-| 基座项目 main |  vue 2.0   | localhost:6000 |
-|  微项目 vue   |   vue2.0   | localhost:6001 |
-| 微项目 react  | react 17.0 | localhost:6002 |
+|     项目      |    版本    |      域名       |
+| :-----------: | :--------: | :-------------: |
+| 基座项目 main |  vue 2.0   | localhost:60000 |
+|  微项目 vue   |   vue2.0   | localhost:60001 |
+| 微项目 react  | react 17.0 | localhost:60002 |
+
+## 参考
+
+[qiankun 2.x 运行时沙箱 源码分析](https://juejin.cn/post/6885214342552223757)

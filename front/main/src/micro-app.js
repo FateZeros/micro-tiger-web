@@ -12,12 +12,12 @@
  */
 const microApps = [
   {
-    name: 'sub-app-vue1',
+    name: 'sub-app-vue',
     entry: `${process.env.VUE_APP_SUB_APP1}`,
     activeRule: '/sub-app-vue1'
   },
   {
-    name: 'sub-app-react1',
+    name: 'sub-app2',
     entry: `${process.env.VUE_APP_SUB_APP2}`,
     activeRule: '/sub-app-react1'
   }

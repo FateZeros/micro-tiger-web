@@ -3,6 +3,8 @@ import App from './App.vue'
 import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
 import microApps from './micro-app'
 
+import './utils/sensor'
+
 Vue.config.productionTip = false
 
 // eslint-disable-next-line
@@ -48,4 +50,11 @@ registerMicroApps(apps, {
 })
 
 setDefaultMountApp('/sub-app-vue1')
-start()
+const options = {
+  excludeAssetFilter: assetUrl => {
+    console.log(assetUrl, 111)
+    // const whiteList = ['sensors']
+    // return whiteList.some(val => assetUrl.includes(val))
+  }
+}
+start(options)
