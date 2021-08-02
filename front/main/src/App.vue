@@ -1,12 +1,18 @@
 <template>
-  <div id="subapp-viewport"></div>
+  <div>
+    <!-- 主应用渲染区，用于挂载主应用路由触发的组件 -->
+    <!-- <router-view /> -->
+    <div id="subapp-viewport"></div>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'App',
 
-  components: {}
+  components: {},
+
+  watch: {}
 }
 </script>
 

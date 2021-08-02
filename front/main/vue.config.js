@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   devServer: {
     port: 60000,
@@ -6,6 +8,13 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': '*',
       'Access-Control-Allow-Headers': '*'
+    }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src')
+      }
     }
   }
 }
