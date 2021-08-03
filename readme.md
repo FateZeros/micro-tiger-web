@@ -5,6 +5,8 @@
 
 实战 [qiankun 2.0](https://qiankun.umijs.org/zh/guide)
 
+<img src="https://github.com/FateZeros/micro-tiger-web/blob/master/example/example-01.png" width="375px" height="669px" />
+
 ```bash
 yarn add qiankun
 ```
@@ -15,8 +17,8 @@ yarn add qiankun
 ├── common        // 公共模块
 ├── main          // 基座
 |—— sub-app       // 子应用
-  |—— sub-react1   // react 子应用
-  └── sub-vue1     // vue 子应用
+  |—— sub-app-react  // react 子应用
+  └── sub-app-vue     // vue 子应用
 ```
 
 ### 项目启动
@@ -26,6 +28,12 @@ yarn add qiankun
 | 基座项目 main |  vue 2.0   | localhost:60000 |
 |  微项目 vue   |   vue2.0   | localhost:60001 |
 | 微项目 react  | react 17.0 | localhost:60002 |
+
+### 加载微应用
+
+通过基座加载微应用有 2 种方案
+一种是通过 `registerMicroApps` 注册子应用信息包括子应用的名称(name)、入口(entry)、挂载容器 id(container)、路由匹配规则(activeRule)，注册后的应用会根据浏览器 url 的变化来匹配对应的子应用并加载。
+另外一种是通过 `loadMicroApp` 来手动加载子应用，也是需要传入子应用的名称、入口、挂载容器 id，不过是少了路由匹配规则。能让你的子应用立即挂载，无须匹配任何路由规则。
 
 ## 参考
 

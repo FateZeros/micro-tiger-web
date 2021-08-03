@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './public-path'
 import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+import App from '@/pages/app'
+import 'antd/dist/antd.css'
 
 /**
  * 渲染函数
