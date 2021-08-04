@@ -5,13 +5,25 @@
 
 实战 [qiankun 2.0](https://qiankun.umijs.org/zh/guide)
 
-<img src="https://github.com/FateZeros/micro-tiger-web/blob/master/example/example-01.png" width="375px" height="669px" />
+<img src="https://github.com/FateZeros/micro-tiger-web/blob/master/example/example-01.png" />
+
+## 安装 qiankun
 
 ```bash
 yarn add qiankun
 ```
 
-## 微服务项目结构
+## 微前端服务优点
+
+1. 子应用并行
+2. 父子应用通信
+3. 预加载 - 空闲时预加载子应用的资源
+4. 公共依赖
+5. 按需加载
+6. JS 沙箱
+7. CSS 隔离
+
+## 微前端服务项目结构
 
 ```bash
 ├── common        // 公共模块
@@ -26,7 +38,7 @@ yarn add qiankun
 |     项目      |    版本    |      域名       |
 | :-----------: | :--------: | :-------------: |
 | 基座项目 main |  vue 2.0   | localhost:60000 |
-|  微项目 vue   |   vue2.0   | localhost:60001 |
+|  微项目 vue   |  vue 2.0   | localhost:60001 |
 | 微项目 react  | react 17.0 | localhost:60002 |
 
 ### 加载微应用

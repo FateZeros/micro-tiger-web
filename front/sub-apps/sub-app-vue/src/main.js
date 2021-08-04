@@ -8,6 +8,8 @@ import store from './store'
 import './permission'
 import '@/utils/sensor/index'
 
+const { name } = require('../package.json')
+
 Vue.config.productionTip = false
 
 let instance = null
@@ -30,7 +32,7 @@ function render(props = {}) {
     render: h => h(App),
     data() {
       return {
-        name: 'sub-app-vue1'
+        name
       }
     }
   }).$mount('#app')
@@ -42,15 +44,15 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-  console.log('vue app bootstraped')
+  console.log(`[子应用] %c${name} bootstraped`, 'color: blue;')
 }
 
 export async function mount(props) {
-  console.log('vue app mount', props)
+  console.log(`[子应用] %c${name} mount`, 'color: blue;')
   render(props)
 }
 export async function unmount() {
-  console.log('vue app unmount')
+  console.log(`[子应用] %c${name} unmount`, 'color: blue;')
   instance.$destroy()
   instance = null
   vueRouter = null

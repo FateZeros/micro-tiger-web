@@ -3,6 +3,8 @@ import {
   addGlobalUncaughtErrorHandler,
   start
 } from 'qiankun'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 // 子应用注册信息
 import apps from './apps'
@@ -15,7 +17,8 @@ import apps from './apps'
 registerMicroApps(apps, {
   // qiankun 生命周期钩子 - 加载前
   beforeLoad: app => {
-    console.log('before load app.name ======>>>>', app.name)
+    NProgress.start()
+    console.log('[LifeCycle] before load app.name ======>>>>', app.name)
   },
   beforeMount: [
     app => {
@@ -24,6 +27,7 @@ registerMicroApps(apps, {
   ],
   afterMount: [
     app => {
+      NProgress.done()
       console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name)
     }
   ],

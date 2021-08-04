@@ -6,7 +6,7 @@ import startQiankun from './micro'
 import { setDefaultMountApp } from 'qiankun'
 
 // permission
-import './permission'
+// import './permission'
 
 // 主引用使用神策
 import './utils/sensor'
