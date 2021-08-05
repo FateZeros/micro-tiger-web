@@ -7,6 +7,7 @@ import { Switch, Route, Redirect, Link } from 'react-router-dom'
 import NotFound from '@/components/ExceptionPages/404'
 import Home from '@/pages/home'
 import VuePage from '@/pages/vue'
+import JQPage from '@/pages/jq'
 
 import styles from './BasicLayout.module.css'
 
@@ -82,7 +83,7 @@ class BasicLayout extends React.Component {
               <Link to="/vue">Vue 页面</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<DesktopOutlined />}>
-              JQ 页面
+              <Link to="jq">JQ 页面</Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<DesktopOutlined />}>
               React 与 Vue 通信
@@ -101,6 +102,7 @@ class BasicLayout extends React.Component {
             <Switch>
               <Route path="/home" component={Home} />
               <Route path="/vue" component={VuePage} />
+              <Route path="/jq" component={JQPage} />
               <Redirect exact from="/" to="/home" />
               <Route render={NotFound} />
             </Switch>

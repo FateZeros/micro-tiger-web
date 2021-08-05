@@ -1,5 +1,7 @@
 # 前端微服务框架搭建
 
+![](https://img.shields.io/badge/npm-6.14.4%2B-brightgreen)
+![](https://img.shields.io/badge/node-12.18.0%2B-brightgreen)
 ![](https://img.shields.io/badge/qiankun-2.0%2B-green)
 ![](https://img.shields.io/badge/vue-2.0%2B-brightgreen)
 
@@ -30,7 +32,8 @@ yarn add qiankun
 ├── main          // 基座
 |—— sub-app       // 子应用
   |—— sub-app-react  // react 子应用
-  └── sub-app-vue     // vue 子应用
+  |—— sub-app-vue    // vue 子应用
+  └── sub-app-jq    // jq 子应用
 ```
 
 ### 项目启动
@@ -40,6 +43,7 @@ yarn add qiankun
 | 基座项目 main |  vue 2.0   | localhost:60000 |
 |  微项目 vue   |  vue 2.0   | localhost:60001 |
 | 微项目 react  | react 17.0 | localhost:60002 |
+|   微项目 jq   |     jq     | localhost:60003 |
 
 ### 加载微应用
 

@@ -6,7 +6,6 @@ const webpack = require('webpack')
 module.exports = {
   webpack: function override(config, env) {
     // 解决主应用接入后会挂掉的问题：https://github.com/umijs/qiankun/issues/340
-    // console.log(config.entry, 2222)
     // config.entry = config.entry.filter(e => !e.includes('webpackHotDevClient'))
 
     config.output.library = `${name}`
