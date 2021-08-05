@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link href="./style/index.css" rel="stylesheet" />
     <style>
       .jq-container {
         padding: 10px;
@@ -13,13 +14,6 @@
 
       .jq-title {
         margin-bottom: 40px;
-      }
-
-      .btn-second-page {
-        outline: none;
-        border: 1px solid blue;
-        cursor: pointer;
-        margin-left: 20px;
       }
     </style>
     <!-- 引入 jquery -->
@@ -30,7 +24,9 @@
   <body>
     <div class="jq-container">
       <h3 class="jq-title">
-        JQ 页面 <button id="nextPage" class="btn-second-page">二级页面</button>
+        JQ 页面
+        <button id="nextPage" class="btn-second-page">二级JQ页面</button>
+        <button id="mainAppPage" class="btn-main-page">跳转主页面</button>
       </h3>
       <div id="mainCharts" style="width: 100%; height:600px;"></div>
     </div>

@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 // eslint-disable-next-line
 new Vue({
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#main')
 
 // 设置子应用中的一个为主应用
 setDefaultMountApp('/sub-app-react1')

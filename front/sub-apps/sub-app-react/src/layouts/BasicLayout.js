@@ -8,6 +8,7 @@ import NotFound from '@/components/ExceptionPages/404'
 import Home from '@/pages/home'
 import VuePage from '@/pages/vue'
 import JQPage from '@/pages/jq'
+import React2Vue from '@/pages/react-vue'
 
 import styles from './BasicLayout.module.css'
 
@@ -70,6 +71,13 @@ class BasicLayout extends React.Component {
 
   render() {
     const { collapsed } = this.state
+    /**
+     * 在主应用跳转路由后，需要指定到子应用的路由
+     * Vue 页面: [主应用路由]/vue + [子应用路由]/#/
+     * React 与 Vue 页面: [主应用路由路由] /react-vue + [子应用路由] /#/msg
+     */
+    const childPath1 = '/#/'
+    const childPath2 = '/#/msg'
 
     return (
       <Layout style={{ minHeight: '100vh' }}>
@@ -80,19 +88,13 @@ class BasicLayout extends React.Component {
               <Link to="/home">React 页面</Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<DesktopOutlined />}>
-              <Link to="/vue">Vue 页面</Link>
+              <Link to={`/vue${childPath1}`}>Vue 页面</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<DesktopOutlined />}>
-              <Link to="jq">JQ 页面</Link>
+              <Link to="/jq/">JQ 页面</Link>
             </Menu.Item>
             <Menu.Item key="4" icon={<DesktopOutlined />}>
-              React 与 Vue 通信
-            </Menu.Item>
-            <Menu.Item key="5" icon={<DesktopOutlined />}>
-              React 与 React 通信
-            </Menu.Item>
-            <Menu.Item key="6" icon={<DesktopOutlined />}>
-              Vue 与 Vue 通信
+              <Link to={`/react-vue${childPath2}`}>React 与 Vue 通信</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -103,6 +105,7 @@ class BasicLayout extends React.Component {
               <Route path="/home" component={Home} />
               <Route path="/vue" component={VuePage} />
               <Route path="/jq" component={JQPage} />
+              <Route path="/react-vue" component={React2Vue} />
               <Redirect exact from="/" to="/home" />
               <Route render={NotFound} />
             </Switch>

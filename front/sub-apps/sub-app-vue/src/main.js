@@ -18,7 +18,7 @@ let vueRouter = null
 function render(props = {}) {
   // vue hash和history 路由切换
   // eslint-disable-next-line
-  const { routerBase } = props
+  const { container, routerBase } = props
   // router = new VueRouter({
   //   // base: window.__POWERED_BY_QIANKUN__ ? routerBase : '/',
   //   // mode: 'history',
@@ -31,11 +31,9 @@ function render(props = {}) {
     store,
     render: h => h(App),
     data() {
-      return {
-        name
-      }
+      return {}
     }
-  }).$mount('#app')
+  }).$mount(container ? container.querySelector('#app') : '#app')
 }
 
 // 独立运行时，直接挂载应用
@@ -45,15 +43,24 @@ if (!window.__POWERED_BY_QIANKUN__) {
 
 export async function bootstrap() {
   console.log(`[子应用] %c${name} bootstraped`, 'color: blue;')
+  return Promise.resolve()
 }
 
 export async function mount(props) {
   console.log(`[子应用] %c${name} mount`, 'color: blue;')
-  render(props)
+  return render(props)
 }
+
+export async function update(props) {
+  console.log(`[子应用] %c${name} update`, 'color: blue;')
+  console.log(`[子应用] %c${name} update props: `, 'color: blue;', props)
+  return Promise.resolve()
+}
+
 export async function unmount() {
   console.log(`[子应用] %c${name} unmount`, 'color: blue;')
   instance.$destroy()
   instance = null
   vueRouter = null
+  return Promise.resolve()
 }

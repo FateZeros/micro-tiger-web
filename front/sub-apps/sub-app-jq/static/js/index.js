@@ -1,5 +1,5 @@
 $(function() {
-  console.log($('.btn-second-page'))
+  console.log(111)
   $('.btn-second-page').click(function() {
     console.log(2222)
   })
