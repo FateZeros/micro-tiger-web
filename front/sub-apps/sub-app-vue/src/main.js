@@ -29,7 +29,10 @@ function render(props = {}) {
   instance = new Vue({
     router: vueRouter,
     store,
-    render: h => h(App),
+    render: h =>
+      h(App, {
+        props
+      }),
     data() {
       return {}
     }
@@ -48,6 +51,13 @@ export async function bootstrap() {
 
 export async function mount(props) {
   console.log(`[子应用] %c${name} mount`, 'color: blue;')
+  console.log(props.data, 'vue')
+  // props.onGlobalStateChange((state, prev) => {
+  //   // state: 变更后的状态; prev 变更前的状态
+  //   console.log(state, prev)
+  // })
+
+  // console.log(props.data, 2222)
   return render(props)
 }
 

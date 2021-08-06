@@ -6,10 +6,26 @@
 </template>
 
 <script>
+import MainHelloWorld from '@/components/hello-comp'
+
 export default {
   name: 'App',
 
-  components: {}
+  components: {},
+
+  mounted() {
+    /**
+     * 基座应用的 组件
+     * 1. 直接挂载到基座应用的 window 对象
+     * 2. 通过基座的 props 传递子应用， 然后在子应用中
+     *
+     * export async function mount(props) {
+     *   window.mainComponent = props.mainComponent
+     *   render(props)
+     * }
+     */
+    window.mainComponent = { MainHelloWorld }
+  }
 }
 </script>
 

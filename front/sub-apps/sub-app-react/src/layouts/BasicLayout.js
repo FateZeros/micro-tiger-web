@@ -40,8 +40,12 @@ const { Header, Content, Footer, Sider } = Layout
 // }
 
 class BasicLayout extends React.Component {
-  state = {
-    collapsed: false
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      collapsed: false
+    }
   }
 
   onCollapse = collapsed => {
