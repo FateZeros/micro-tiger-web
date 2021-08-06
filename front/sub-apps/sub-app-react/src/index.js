@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals'
 import App from '@/pages/app'
 import 'antd/dist/antd.css'
 
+import SharedModule from '@/shared'
+
 const { name } = require('../package.json')
 
 /**
@@ -36,6 +38,8 @@ export async function bootstrap() {
 export async function mount(props) {
   console.log(`[子应用] %c${name} mount`, 'color: blue;')
   console.log('[子应用 - 主应用] props', props)
+  const { shared = SharedModule.getShared() } = props
+  SharedModule.overloadShared(shared)
   render(props)
 }
 

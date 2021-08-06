@@ -4,8 +4,7 @@ import Home2Svg from '@/assets/home2.svg'
 
 const { Paragraph } = Typography
 
-const Home = props => {
-  console.log(props, 1212)
+const Home = () => {
   const Content = ({ children, extraContent }) => (
     <Row>
       <div style={{ flex: 1 }}>{children}</div>

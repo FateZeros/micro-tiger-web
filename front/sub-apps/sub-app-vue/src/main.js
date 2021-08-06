@@ -8,6 +8,8 @@ import store from './store'
 import './permission'
 import '@/utils/sensor/index'
 
+import SharedModule from '@/shared'
+
 const { name } = require('../package.json')
 
 Vue.config.productionTip = false
@@ -51,19 +53,14 @@ export async function bootstrap() {
 
 export async function mount(props) {
   console.log(`[子应用] %c${name} mount`, 'color: blue;')
-  console.log(props.data, 'vue')
-  // props.onGlobalStateChange((state, prev) => {
-  //   // state: 变更后的状态; prev 变更前的状态
-  //   console.log(state, prev)
-  // })
-
-  // console.log(props.data, 2222)
+  const { shared = SharedModule.getShared() } = props
+  SharedModule.overloadShared(shared)
   return render(props)
 }
 
 export async function update(props) {
   console.log(`[子应用] %c${name} update`, 'color: blue;')
-  console.log(`[子应用] %c${name} update props: `, 'color: blue;', props)
+  // console.log(`[子应用] %c${name} update props: `, 'color: blue;', props)
   return Promise.resolve()
 }
 

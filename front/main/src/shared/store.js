@@ -13,7 +13,11 @@ const actions = initGlobalState(initialState)
 
 actions.onGlobalStateChange((newState, prev) => {
   // state: 变更后的状态; prev 变更前的状态
-  console.log('main change', JSON.stringify(newState), JSON.stringify(prev))
+  console.log(
+    '[基座应用 change] main change',
+    JSON.stringify(newState),
+    JSON.stringify(prev)
+  )
 
   for (const key in newState) {
     initialState[key] = newState[key]
@@ -26,5 +30,8 @@ actions.getGlobalState = key => {
   // 无key，表示取全部
   return key ? initialState[key] : initialState
 }
+
+// actions.setGlobalState()
+// actions.offGlobalStateChange()
 
 export default actions

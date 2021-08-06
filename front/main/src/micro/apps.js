@@ -34,7 +34,7 @@ const apps = microApps.map(item => {
       routerBase: item.activeRule,
       // 下发getGlobalState方法
       // getGlobalState: store.getGlobalState,
-      Shared: Shared
+      shared: Shared
     }
   }
 })

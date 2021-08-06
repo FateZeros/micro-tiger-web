@@ -52,8 +52,8 @@ qiankun 框架搭建
 - [x] 接入 React 项目，路由跳转
 - [x] 接入 Vue 项目，路由跳转
 - [ ] 接入 JQ 项目
-- [ ] React 项目与 Vue 项目通信
-- [ ] 复用基座组件
+- [x] React 项目与 Vue 项目通信
+- [x] 复用基座组件 Vue 组件
 
 ### 加载微应用
 
@@ -69,6 +69,7 @@ qiankun 会在子应用激活的时候为其赋予一个代理后的 window 对�
 ![React 子应用](https://github.com/FateZeros/micro-tiger-web/blob/master/example/1.png) </br>
 ![Vue 子应用](https://github.com/FateZeros/micro-tiger-web/blob/master/example/2.png) </br>
 ![JQ 子应用](https://github.com/FateZeros/micro-tiger-web/blob/master/example/3.png) </br>
+![React 与 Vue应用](https://github.com/FateZeros/micro-tiger-web/blob/master/example/4.png) </br>
 
 ## 参考
 

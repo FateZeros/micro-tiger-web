@@ -1,5 +1,3 @@
-import { getTime } from '@/utils'
-
 class Shared {}
 
 class SharedModule {
@@ -9,7 +7,6 @@ class SharedModule {
    * 重载 shared
    */
   static overloadShared(shared) {
-    shared.getTime = getTime
     SharedModule.shared = shared
   }
 
