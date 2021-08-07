@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div>
-      <H3>JQ 二级页面 <button>上级页面</button></H3>
+      <H3>JQ 二级页面 <button class="pre-page">上级页面</button></H3>
     </div>
   </body>
+  <script>
+    $(function() {
+      $('.pre-page').click(function() {
+        window.location.href = './'
+      })
+    })
+  </script>
 </html>

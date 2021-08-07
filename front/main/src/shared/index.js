@@ -3,12 +3,18 @@ import store from './store'
 import * as mainUtils from '@/utils'
 
 class Shared {
-  static store = store
-  static mainUtils = mainUtils
+  // static store = store
+  // static mainUtils = mainUtils
+  constructor() {
+    this.store = store
+    this.mainUtils = mainUtils
+  }
 
   commonFunc() {
-    console.log('common Function')
+    console.log('这是一个基座 common 方法')
   }
 }
 
-export default Shared
+const shared = new Shared()
+// console.log(shared.mainUtils, '测试')
+export default shared

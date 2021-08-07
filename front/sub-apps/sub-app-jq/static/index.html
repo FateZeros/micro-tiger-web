@@ -19,17 +19,17 @@
     <!-- 引入 jquery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/echarts.min.js"></script>
-    <script src="./js/index.js"></script>
   </head>
   <body>
     <div class="jq-container">
       <h3 class="jq-title">
         JQ 页面
-        <button id="nextPage" class="btn-second-page">二级JQ页面</button>
-        <button id="mainAppPage" class="btn-main-page">跳转主页面</button>
+        <!-- <button id="nextPage" class="btn-second-page">二级JQ页面</button>
+        <button id="mainAppPage" class="btn-main-page">跳转主页面</button> -->
       </h3>
       <div id="mainCharts" style="width: 100%; height:600px;"></div>
     </div>
+    <script src="./js/index.js"></script>
   </body>
   <script>
     function initEchart(id) {
@@ -71,7 +71,7 @@
       }, 2000)
     }
 
-    const renderHtml = async props => {
+    const renderHtml = props => {
       if (props) {
         console.log(props.brand, '============')
       }
@@ -80,13 +80,18 @@
       if (mainChartsEle) {
         initEchart(mainChartsEle)
       }
+
+      // $('.btn-second-page').click(function() {
+      //   window.location.href = './second.html'
+      // })
+      // return Promise.resolve()
     }
 
     if (!window.__POWERED_BY_QIANKUN__) {
       renderHtml()
     }
 
-    ;(function(global) {
+    ;(global => {
       /**
        * 注册微应用生命周期钩子函数
        * global[appName] 中的 appName 与主应用中注册的微应用名称一致
@@ -105,7 +110,8 @@
          */
         mount: props => {
           console.log(`[子应用] %csub-app-jq mount`, 'color: blue;')
-          return renderHtml(props)
+          renderHtml(props)
+          // return Promise.resolve()
         },
         /**
          * 应用每次 切出/卸载 会调用的方法，通常在这里我们会卸载微应用的应用实例

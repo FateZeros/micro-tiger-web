@@ -31,6 +31,14 @@ const Home = () => {
     </>
   )
 
+  const handleOpenVueApp = () => {
+    window.open(process.env.REACT_APP_SUB_APP_VUE1)
+  }
+
+  const handleOpenJQ = () => {
+    window.open(process.env.REACT_APP_SUB_APP_JQ1)
+  }
+
   return (
     <PageHeader
       title="这是一个React应用"
@@ -38,8 +46,12 @@ const Home = () => {
       subTitle="react 子应用"
       tags={<Tag color="blue">Running</Tag>}
       extra={[
-        <Button key="3">Operation</Button>,
-        <Button key="2">Operation</Button>,
+        <Button key="3" onClick={handleOpenVueApp}>
+          打开 Vue 应用
+        </Button>,
+        <Button key="2" onClick={handleOpenJQ}>
+          打开 JQ 应用
+        </Button>,
         <Button key="1" type="primary">
           Primary
         </Button>

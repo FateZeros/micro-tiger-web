@@ -14,9 +14,12 @@ const actions = initGlobalState(initialState)
 actions.onGlobalStateChange((newState, prev) => {
   // state: 变更后的状态; prev 变更前的状态
   console.log(
-    '[基座应用 change] main change',
-    JSON.stringify(newState),
-    JSON.stringify(prev)
+    `[基座应用 change] main change %cpreState: ${JSON.stringify(prev)}`,
+    'color: #1879ff;'
+  )
+  console.log(
+    `[基座应用 change] main change %cnewState: ${JSON.stringify(newState)}`,
+    'color: #1879ff;'
   )
 
   for (const key in newState) {

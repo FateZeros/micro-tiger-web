@@ -1,5 +1,4 @@
-// import store from './store'
-import Shared from '@/shared'
+import shared from '@/shared'
 
 // function genActiveRule(routerPrefix) {
 //   return location => location.pathname.startsWith(routerPrefix)
@@ -34,7 +33,7 @@ const apps = microApps.map(item => {
       routerBase: item.activeRule,
       // 下发getGlobalState方法
       // getGlobalState: store.getGlobalState,
-      shared: Shared
+      shared: shared
     }
   }
 })
