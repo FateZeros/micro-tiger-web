@@ -52,7 +52,7 @@ yarn add qiankun
 ```bash
 docker build -t [name] .
 
-docker run -itd --name [name] -p [端口]:90 [镜像id]
+docker run -itd --name [name] -p [端口]:80 [镜像id]
 ```
 
 ### 项目实现功能
